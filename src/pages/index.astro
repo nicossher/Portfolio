@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro'
+import Projects from '../components/Projects.astro'
+import Hero from '../components/Hero.astro';
+import CodeIcon from '../icons/code.astro' 
+---
+<Layout 
+title="Portfolio de Nicholas Sher - Desarrolador y Programador Web - Estudiante de Inegenieria en Sistemas."
+description='Portfolio creado por Nicholas desarrollador web y estudiante de ingenieria en sistemas, donde encontraras toda su informacion importante junto a sus projectos que lo llevaron a aprender sus habilidades de programacion.	'
+>
+<main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      	<Hero>
+      		</slot>
+    	</Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+<!-- 
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer> -->
+  </div>
+  </main>
+</Layout>
+

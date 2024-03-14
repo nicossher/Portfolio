@@ -1,0 +1,188 @@
+---
+import LinkButton from "./LinkButton.astro"
+
+import GitHubIcon from "../icons/github.astro"
+import LinkIcon from "../icons/link.astro"
+import React from "../icons/react.astro"
+import AstroIcon from "../icons/astro.astro"
+import JavaScript from "../icons/javascript.astro"
+import C from "../icons/c.astro"
+import CPlus from "../icons/cplus.astro"
+import Bootstrap from "../icons/bootstrap.astro"
+import Tailwind from "../icons/tailwind.astro"
+import CSS from "../icons/css.astro"
+import HTML from "../icons/html.astro"
+import Firebase from "../icons/firebase.astro"
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-[#1a93a5] text-white",
+    icon: React,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#e51300] text-white",
+    icon: AstroIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#ffcc02] text-white",
+    icon: JavaScript,
+  },
+  C: {
+    name: "C",
+    class: "bg-[#659AD2] text-white",
+    icon: C,
+  },
+  CPLUS: {
+    name: "C++",
+    class: "bg-[#659AD2] text-white",
+    icon: CPlus,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: "bg-[#490093] text-white",
+    icon: Bootstrap,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#0b8be0] text-white",
+    icon: CSS,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#ff693f] text-white",
+    icon: HTML,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-[#f78818] text-white",
+    icon: Firebase,
+  },
+}
+
+
+const PROJECTS = [
+    {
+        title : 'Portfolio - Primer portfolio creado para mostrar mis proyectos',
+        description: 'Portfolio creado por Nicholas desarrollador web y estudiante de ingenieria en sistemas, donde encontraras toda su informacion importante junto a sus projectos que lo llevaron a aprender sus habilidades de programacion.',
+        link: '',
+        github: 'https://github.com/nicossher/tienda-ecommerce',
+        image: '../../public/projects/portfolio.webp',
+        tags: [TAGS.ASTRO, TAGS.TAILWIND]
+    },
+    {
+        title : 'Hoops Central Store - Ecommerce',
+        description: 'An e-commerce store project for the React JS course at Coderhouse. Product catalog with images and descriptions, shopping cart to add and manage products, database updates at the time of purchase, responsive design by Bootstrap.',
+        link: '',
+        github: 'https://github.com/nicossher/tienda-ecommerce',
+        image: '../../public/projects/hoopCentralStore.webp',
+        tags: [TAGS.REACT, TAGS.BOOTSTRAP, TAGS.FIREBASE]
+    },
+    {
+        title : 'Pokedex - API',
+        description: 'This project is a Pokédex web application created with JavaScript, featuring a responsive design that allows users to view and classify Pokémon. The page was designed for practicing the use of APIs.',
+        link: '',
+        github: 'https://github.com/nicossher/pokedex',
+        image: '../../public/projects/pokedex.webp',
+        tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.HTML]
+    },
+    {
+        title : 'Calculadora Semantica - Flex & Bison',
+        description: 'This project aims to create a fully functional calculator with semantic routines and dictionary handling recognition. It utilizes Flex to recognize a language with tokens such as Identifier, Integer, and Hexadecimal, as well as error tokens for general errors, malformed integers, and end-of-file conditions. Additionally, Bison is used to implement syntax grammar and a symbol table.',
+        link: '',
+        github: 'https://github.com/nicossher/calculadora-semantica',
+        image: '../../public/projects/calculadora-semantica.webp',
+        tags: [TAGS.C]
+    },
+    {
+        title : 'Arbol Binario sin Recursion',
+        description: 'This project demonstrates the visualization of a binary tree without using recursion. It employs stacks and pointers to achieve the traversal and display of the binary tree structure.',
+        link: '',
+        github: 'https://github.com/nicossher/binary-tree-without-recursion',
+        image: '../../public/projects/arbolBinario.webp',
+        tags: [TAGS.CPLUS]
+    },
+    {
+        title : 'Calculadora con Javascript',
+        description: 'This project is a simple calculator developed in JavaScript, allowing users to perform basic mathematical operations.',
+        link: '',
+        github: 'https://github.com/nicossher/calculadora',
+        image: '../../public/projects/calculadoraJs.webp',
+        tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.HTML]
+    },
+    {
+        title : 'Piedra, Papel o Tijera con Javascript',
+        description: 'Rock, Paper, Scissors game developed in JavaScript',
+        link: '',
+        github: 'https://github.com/nicossher/calculadora',
+        image: '../../public/projects/piedra-papel-tijera.webp',
+        tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.HTML]
+    },
+    {
+        title : 'Telephone Number Validator',
+        description: ' This project involves developing a tool to validate and format US phone numbers. In the United States, phone numbers can be formatted in various ways, and the tool aims to recognize and standardize these formats',
+        link: '',
+        github: 'https://github.com/nicossher/freeCodeCamp-JavaScript-Algorithms-course/tree/main/telephoneValidator',
+        image: '../../public/projects/numberValidator.webp',
+        tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.HTML]
+    } 
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+      <div class="w-full md:w-1/2">
+        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+          <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 md:max-w-lg">
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+          {title}
+        </h3>
+        <div class="flex flex-wrap mt-2">
+          <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+          <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+          <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHubIcon class="size-6" />
+                  Code
+                  
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <LinkIcon class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+        </div>
+      </div>
+    </article>
+    ))
+  }
+</div>

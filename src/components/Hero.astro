@@ -1,0 +1,46 @@
+---
+const personalImageAlt = "Nicholas Sher"
+
+import Badge from "./Badge.astro"
+import LinkedInIcon from "../icons/linkedIn.astro"
+import MailIcon from "../icons/gmail.astro"
+import NavIcons from "./NavIcons.astro"
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="https://www.crearuncurriculum.com/wp-content/uploads/2020/01/Foto-CV-1.jpg"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://linkedin.com/in/nicholassher"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+        Hola, soy Nicholas Sher 
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+        Desarrolador Web y Estudiante de Ingeniería en Sistemas. De Buenos Aires, Argentina
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <NavIcons href="mailto:nicossher@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </NavIcons>
+    <NavIcons href="https://linkedin.com/in/nicholassher">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </NavIcons>
+  </nav>
+</div>
