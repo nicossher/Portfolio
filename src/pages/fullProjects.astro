@@ -1,10 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/SectionContainer.astro'
-import ProjectsPreview from '../components/ProjectsPreview.astro'
-import Hero from '../components/Hero.astro';
-import AboutMe from '../components/AboutMe.astro';
-import ProfileCheck from '../icons/profileCheck.astro' 
+import Projects from '../components/Projects.astro'
 import CodeIcon from '../icons/code.astro' 
 ---
 <Layout 
@@ -12,12 +9,6 @@ title="Nicholas Sher's Portfolio - Web Developer and Programmer - Computing Syst
 description='Portfolio created by Nicholas, web developer and student of systems engineering, where you will find all his important information along with the projects that led him to acquire his programming skills.'
 >
 <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
-      	<Hero>
-      		</slot>
-    	</Hero>
-    </SectionContainer>
-    <div class="space-y-24">
 
     <SectionContainer id="projects">
       <h2
@@ -26,19 +17,8 @@ description='Portfolio created by Nicholas, web developer and student of systems
         <CodeIcon class="size-7" />
         Projects
       </h2>
-      <ProjectsPreview />
-    </SectionContainer>
-
-    <SectionContainer id="about-me">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
-      >
-        <ProfileCheck class="size-8" />
-        About me
-      </h2>
-      <AboutMe />
+      <Projects />
     </SectionContainer>
   </div>
   </main>
 </Layout>
-
