@@ -4,6 +4,7 @@ const personalImageAlt = "Nicholas Sher"
 import Badge from "./Badge.astro"
 import LinkedInIcon from "../icons/linkedIn.astro"
 import MailIcon from "../icons/gmail.astro"
+import DownloadIcon from "../icons/download.astro"
 import NavIcons from "./NavIcons.astro"
 ---
 
@@ -34,13 +35,17 @@ import NavIcons from "./NavIcons.astro"
       Web Developer and Computing Systems Engineering student. From Buenos Aires, Argentina
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
-    <NavIcons href="mailto:nicossher@gmail.com">
-      <MailIcon class="size-4" />
-      Contact me
-    </NavIcons>
     <NavIcons href="https://linkedin.com/in/nicholassher">
       <LinkedInIcon class="size-4" />
       LinkedIn
+    </NavIcons>
+    <NavIcons >
+      <MailIcon class="size-5" />
+      nicossher@gmail.com
+    </NavIcons>
+    <NavIcons >
+      <DownloadIcon class="size-5" />
+      Download Cv
     </NavIcons>
   </nav>
 </div>
