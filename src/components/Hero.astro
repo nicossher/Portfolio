@@ -1,51 +1,47 @@
 ---
 const personalImageAlt = "Nicholas Sher"
 
-import Badge from "./Badge.astro"
 import LinkedInIcon from "../icons/linkedIn.astro"
 import MailIcon from "../icons/gmail.astro"
 import DownloadIcon from "../icons/download.astro"
 import NavIcons from "./NavIcons.astro"
 ---
 
-<div class="max-w-xl">
-  <div class="flex gap-4 mb-4">
-    <img
-      class="rounded-full shadow-lg size-16"
-      src="../../public/foto-perfil.jpg"
-      alt={personalImageAlt}
-    />
-    <a
-      href="https://linkedin.com/in/nicholassher"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
+<div class="max-w-3xl inline-flex gap-10">
+  
+  <div>
+    <h1
+      class="text-4xl font-bold tracking-wider sm:text-5xl text-white"
     >
-      <Badge>Available to work</Badge>
-    </a>
+        Hey, I'm <span class="text-nowrap"> Nicholas Sher </span>
+    </h1>
+    <p
+      class="mt-6 text-xl [&>strong]:text-yellow-200 [&>strong]:font-semibold text-gray-300"
+    >
+        Web Developer and Computing Systems Engineering student. From Buenos Aires, Argentina
+    </p>
+    <nav class="flex flex-wrap gap-4 mt-8">
+      <NavIcons href="https://linkedin.com/in/nicholassher">
+        <LinkedInIcon class="size-4" />
+        LinkedIn
+      </NavIcons>
+      <NavIcons >
+        <DownloadIcon class="size-5" />
+        Download Resume
+      </NavIcons>
+      <NavIcons >
+        <MailIcon class="size-5" />
+        nicossher@gmail.com
+      </NavIcons>
+      
+    </nav>
   </div>
-  <h1
-    class="text-4xl font-bold tracking-tight sm:text-5xl text-white"
-  >
-      Hey, I'm Nicholas Sher 
-  </h1>
-  <p
-    class="mt-6 text-xl [&>strong]:text-yellow-200 [&>strong]:font-semibold text-gray-300"
-  >
-      Web Developer and Computing Systems Engineering student. From Buenos Aires, Argentina
-  </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
-    <NavIcons href="https://linkedin.com/in/nicholassher">
-      <LinkedInIcon class="size-4" />
-      LinkedIn
-    </NavIcons>
-    <NavIcons >
-      <MailIcon class="size-5" />
-      nicossher@gmail.com
-    </NavIcons>
-    <NavIcons >
-      <DownloadIcon class="size-5" />
-      Download Cv
-    </NavIcons>
-  </nav>
+    <img 
+      width="200" 
+      height="200" 
+      src="../../public/foto-perfil.jpg" 
+      alt={personalImageAlt} 
+      class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-yellow-500/5 ring-1 ring-white/20 " 
+      style="object-position: 50% 50%">
+
 </div>
