@@ -6,7 +6,7 @@ import robotsTxt from "astro-robots-txt";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
-  site: "https://porfolio-sher.dev/",
+  site: "https://portfolio-nsher.netlify.app/",
   build: {
     outDir: "public",
   },
